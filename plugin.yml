@@ -1,0 +1,37 @@
+name: FrizMineBedrock
+main: ru.frizmin.FrizMineBedrock
+version: 1.0.0
+api: ["1.0.0"]
+author: FrizMine
+depend: [LuckPerms]
+commands:
+  kit:
+    description: Получить стартовый набор
+  grant:
+    description: Выдать привилегию игроку
+    permission: frizmin.grant
+  talisman:
+    description: Выдать талисман
+    permission: frizmin.grant
+  tp:
+    description: Телепортироваться к игроку
+    permission: frizmin.tp
+  vanish:
+    description: Включить/выключить невидимость
+    permission: frizmin.vanish
+  blacktire:
+    description: Выдать Black Tire
+    permission: frizmin.grant
+  watertire:
+    description: Выдать Water Tire
+    permission: frizmin.grant
+  lavatire:
+    description: Выдать Lava Tire
+    permission: frizmin.grant
+permissions:
+  frizmin.grant:
+    default: op
+  frizmin.tp:
+    default: op
+  frizmin.vanish:
+    default: op
