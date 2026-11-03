@@ -1,0 +1,98 @@
+# Это самостоятельные utility-наборы. Точные закрытые составы наборов FrizMine публично не опубликованы.
+cooldown_seconds: 86400
+kits:
+  warrior:
+    display: "Кит Воина"
+    rank_weight: 10
+    commands: ["give %player% iron_pickaxe 1", "give %player% bread 16", "give %player% torch 24"]
+  wanderer:
+    display: "Кит Странника"
+    rank_weight: 20
+    commands: ["give %player% iron_axe 1", "give %player% iron_shovel 1", "give %player% bread 24", "give %player% oak_planks 64"]
+  lord:
+    display: "Кит Лорда"
+    rank_weight: 30
+    commands: ["give %player% iron_pickaxe 1", "give %player% iron_axe 1", "give %player% iron_shovel 1", "give %player% torch 48", "give %player% bread 32"]
+  legend:
+    display: "Кит Легенды"
+    rank_weight: 40
+    commands: ["give %player% diamond_pickaxe 1", "give %player% iron_axe 1", "give %player% iron_shovel 1", "give %player% oak_planks 128", "give %player% bread 48"]
+  prince:
+    display: "Кит Принца"
+    rank_weight: 50
+    commands: ["give %player% diamond_pickaxe 1", "give %player% diamond_axe 1", "give %player% torch 64", "give %player% bread 64", "give %player% oak_planks 128"]
+  magister:
+    display: "Кит Магистра"
+    cooldown_seconds: 172800
+    rank_weight: 60
+    commands: ["give %player% diamond_pickaxe 1", "give %player% diamond_axe 1", "give %player% diamond_shovel 1", "give %player% torch 96", "give %player% bread 64"]
+  overlord:
+    display: "Кит Властелина"
+    rank_weight: 70
+    commands: ["give %player% diamond_pickaxe 1", "give %player% diamond_axe 1", "give %player% diamond_shovel 1", "give %player% oak_planks 256", "give %player% bread 64"]
+  guardian:
+    display: "Кит Хранителя"
+    rank_weight: 80
+    required_donor_rank: guardian
+    cooldown_seconds: 86400
+    commands: []
+    # Potion bundle: two of each of the five entries in the existing uncraftable potion catalogue.
+    items:
+      - "catalog:sphere_punisher|1||§4Сфера Карателя"
+      - "catalog:potion_strength_iii|2||§cНесоздаваемое зелье Силы III"
+      - "catalog:potion_speed_iii|2||§bНесоздаваемое зелье Скорости III"
+      - "catalog:potion_invisibility_iii|1||§7Несоздаваемое зелье Невидимости"
+      - "catalog:potion_fire_resistance_iii|1||§6Несоздаваемое зелье Огнестойкости"
+      - "catalog:potion_regeneration_iii|2||§dНесоздаваемое зелье Регенерации"
+      - "catalog:potion_health_boost_ii|1||§dНесоздаваемое зелье Прилива здоровья II"
+      - "catalog:potion_resistance_ii|1||§8Несоздаваемое зелье Сопротивления II"
+      - "catalog:layer|24||§7Пласт"
+      - "catalog:bright_dust|24||§eЯвная пыль"
+      - "catalog:disorientation|24||§5Дезориентация"
+      - "catalog:gods_aura|24||§dБожья аура"
+      - "catalog:trapka|24||§5Трапка — 40×40×40, 60 секунд"
+      - "minecraft:crossbow|1|quick_charge:3,multishot:1,piercing:7,sniper:2,unbreaking:0|§6Арбалет Хранителя"
+      - "minecraft:trident|1|impaling:7,loyalty:5,channeling:1,demolition:1,scout:2,stupor:3|§6Трезубец Хранителя"
+      - "minecraft:totem|4||§6Тотем бессмертия"
+      - "minecraft:obsidian|128||§5Обсидиан"
+      - "minecraft:firework_rocket|128||§cФейерверк"
+      - "minecraft:golden_apple|64||§6Золотое яблоко"
+      - "minecraft:enchanted_golden_apple|64||§dЗачарованное золотое яблоко"
+      - "minecraft:ender_pearl|128||§5Эндер-жемчуг"
+      - "minecraft:cooked_beef|64||§6Стейк из говядины"
+      - "minecraft:arrow|64||§fСтрела"
+      - "minecraft:shield|1|unbreaking:10|§6Щит Хранителя"
+      - "minecraft:elytra|1|unbreaking:10,mending:1|§6Элитры Хранителя"
+      - "minecraft:netherite_sword|1|sharpness:7,fire_aspect:5,unbreaking:0|§6Меч Хранителя"
+      - "minecraft:netherite_pickaxe|1|fortune:5,efficiency:7,unbreaking:0|§6Кирка Хранителя"
+      - "minecraft:bow|1|flame:1,punch:2,infinity:1,power:5,demolition:1,sniper:1,unbreaking:0|§6Лук Хранителя"
+      - "minecraft:netherite_helmet|1|protection:5,projectile_protection:5,blast_protection:5,fire_protection:5,revival:1,dodge:1,unbreaking:0|§6Шлем Хранителя — Тишина"
+      - "minecraft:netherite_chestplate|1|fire_protection:5,blast_protection:5,projectile_protection:5,protection:5,revival:1,dodge:1,unbreaking:0|§6Нагрудник Хранителя — Тишина"
+      - "minecraft:netherite_leggings|1|fire_protection:5,swift_sneak:3,blast_protection:5,projectile_protection:5,protection:5,revival:1,dodge:1,unbreaking:0|§6Поножи Хранителя — Тишина"
+      - "minecraft:netherite_boots|1|feather_falling:5,projectile_protection:5,fire_protection:5,protection:5,blast_protection:5,soul_speed:3,depth_strider:5,revival:1,unbreaking:0|§6Ботинки Хранителя — Тишина"
+    unresolved:
+      - "Уникальный приват ×1 — нет подтверждённого ID и поведения привата"
+    unresolved_behaviors:
+      - "Снайпер, Подрывник, Скаут, Ступор, Оживление и Уклонение сохранены на предметах, но их игровые эффекты ещё не реализованы"
+      - "Особая механика Неразрушимости V/X (уменьшение потери прочности) ещё не подтверждена игровым тестом; Неразрушимость без уровня устанавливает флаг без износа"
+      - "Для узора Тишина установлен материал отделки Незерит как временное значение; материал отделки в дополнении не указан"
+  start:
+    display: "Кит Старт"
+    rank_weight: 0
+    cooldown_seconds: 43200
+    commands: []
+    todo: "Уточнить материал меча, кирки и брони, а также два дополнительных предмета."
+  media1:
+    display: "Медиа #1"
+    rank_weight: 0
+    cooldown_seconds: 86400
+    commands: []
+    todo: "Состав не задан в ТЗ."
+  media2:
+    display: "Медиа #2"
+    rank_weight: 0
+    cooldown_seconds: 86400
+    commands: []
+    todo: "Состав не задан в ТЗ."
+
+

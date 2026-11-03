@@ -1,0 +1,20 @@
+donor-ranks:
+  player: {display: "Игрок", weight: 0, permissions: []}
+  warrior: {display: "Воин", weight: 10, permissions: [friz.donor.feed, friz.donor.craft, friz.donor.nv, friz.donor.ec]}
+  wanderer: {display: "Странник", weight: 20, permissions: [friz.donor.exp, friz.donor.anvil, friz.donor.grindstone, friz.donor.pweather]}
+  lord: {display: "Лорд", weight: 30, permissions: [friz.donor.heal, friz.donor.smithtable, friz.donor.ptime, friz.donor.top]}
+  legend: {display: "Легенда", weight: 40, permissions: [friz.donor.bc, friz.donor.near, friz.donor.rename, friz.donor.repair]}
+  prince: {display: "Принц", weight: 50, permissions: [friz.donor.ad, friz.donor.invsee, friz.donor.ench, friz.donor.jump, friz.donor.ext]}
+  magister: {display: "Магистр", weight: 60, permissions: [friz.donor.fly, friz.donor.hide, friz.donor.redeath, friz.donor.nick, friz.donor.realname, friz.donor.mg_spec, friz.donor.donsalary]}
+  overlord: {display: "Властелин", weight: 70, permissions: [friz.donor.grant, friz.donor.vanish, friz.donor.fixall, friz.donor.ecinvsee, friz.donor.back, friz.donor.flyspeed, friz.donor.arena_spec, friz.donor.wardencity_spec, friz.donor.donsalary]}
+  guardian: {display: "Хранитель", weight: 80, permissions: [friz.donor.grant, friz.donor.givefly, friz.donor.ban, friz.donor.prefix, friz.donor.event_spec, friz.donor.donsalary]}
+staff-ranks:
+  helper: {display: "Хелпер", weight: 100, permissions: [friz.staff.chat, friz.staff.whois, friz.staff.reports]}
+  moderator: {display: "Модератор", weight: 200, permissions: [friz.staff.chat, friz.staff.whois, friz.staff.reports, friz.mod.warn, friz.mod.mute, friz.mod.freeze]}
+  senior-moderator: {display: "Старший модератор", weight: 300, permissions: [friz.staff.chat, friz.staff.whois, friz.staff.reports, friz.mod.warn, friz.mod.mute, friz.mod.freeze, friz.mod.ban, friz.staff.vanish]}
+  administrator: {display: "Администратор", weight: 400, permissions: [friz.staff.chat, friz.staff.whois, friz.staff.reports, friz.staff.tp, friz.staff.tphere, friz.staff.tpall, friz.staff.feed, friz.staff.heal, friz.mod.warn, friz.mod.mute, friz.mod.freeze, friz.mod.ban, friz.staff.vanish]}
+  senior-administrator: {display: "Старший администратор", weight: 500, permissions: [friz.staff.chat, friz.staff.whois, friz.staff.reports, friz.staff.tp, friz.staff.tphere, friz.staff.tpall, friz.staff.feed, friz.staff.heal, friz.staff.logs, friz.staff.promote, friz.staff.demote, friz.mod.ban, friz.staff.vanish]}
+  curator: {display: "Куратор", weight: 600, permissions: [friz.staff.chat, friz.staff.whois, friz.staff.reports, friz.staff.tp, friz.staff.tphere, friz.staff.tpall, friz.staff.feed, friz.staff.heal, friz.staff.logs, friz.staff.promote, friz.staff.demote, friz.staff.rollback, friz.admin.events]}
+  developer: {display: "Разработчик", weight: 700, permissions: [friz.staff.chat, friz.staff.whois, friz.staff.reports, friz.staff.tp, friz.staff.tphere, friz.staff.tpall, friz.staff.feed, friz.staff.heal, friz.staff.logs, friz.staff.promote, friz.staff.demote, friz.staff.rollback, friz.admin.events, friz.admin.config]}
+  creator: {display: "Создатель", weight: 900, permissions: ['*']}
+  owner: {display: "Владелец", weight: 1000, permissions: ['*']}

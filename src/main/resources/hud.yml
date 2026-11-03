@@ -1,0 +1,7 @@
+# Right-side FrizMine sidebar and ground-item cleanup.
+enabled: true
+server-number: 1
+# Visual references show a running item-cleanup countdown; set 0 to disable cleanup.
+item-clear-interval-seconds: 600
+schedule:
+  next-clear-at: 0

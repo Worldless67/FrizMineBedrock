@@ -1,0 +1,6 @@
+# Overlay for Nukkit-MOT nukkit-mot.yml.
+# Restrict clients to Bedrock network protocol 844 for the 1.21.114 target.
+# Merge these two values under the existing game-feature-settings section.
+game-feature-settings:
+  multiversion-min-protocol: 844
+  multiversion-max-protocol: 844

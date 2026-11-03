@@ -1,0 +1,150 @@
+{
+  "resource_pack_name": "frizproject_catalog_icons",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "athena_sphere": {
+      "textures": "textures/items/athena_sphere"
+    },
+    "titan_sphere": {
+      "textures": "textures/items/titan_sphere"
+    },
+    "andromeda_sphere": {
+      "textures": "textures/items/andromeda_sphere"
+    },
+    "aegis_sphere": {
+      "textures": "textures/items/aegis_sphere"
+    },
+    "punisher_talisman": {
+      "textures": "textures/items/punisher_talisman"
+    },
+    "crusher_talisman": {
+      "textures": "textures/items/crusher_talisman"
+    },
+    "athena_talisman": {
+      "textures": "textures/items/athena_talisman"
+    },
+    "drill_pickaxe": {
+      "textures": "textures/items/drill_pickaxe"
+    },
+    "sharpness_vii_book": {
+      "textures": "textures/items/sharpness_vii_book"
+    },
+    "meteor_shard": {
+      "textures": "textures/items/meteor_shard"
+    },
+    "volcano_core": {
+      "textures": "textures/items/volcano_core"
+    },
+    "soul_flower": {
+      "textures": "textures/items/soul_flower"
+    },
+    "dragon_egg": {
+      "textures": "textures/items/dragon_egg"
+    },
+    "magic_gate_key": {
+      "textures": "textures/items/magic_gate_key"
+    },
+    "rare_cache": {
+      "textures": "textures/items/rare_cache"
+    },
+    "event_token": {
+      "textures": "textures/items/event_token"
+    },
+    "collector_soul": {
+      "textures": "textures/items/collector_soul"
+    },
+    "ender_tear": {
+      "textures": "textures/items/ender_tear"
+    },
+    "alchemist_potion": {
+      "textures": "textures/items/alchemist_potion"
+    },
+    "auction_ticket": {
+      "textures": "textures/items/auction_ticket"
+    },
+    "buyer_coin": {
+      "textures": "textures/items/buyer_coin"
+    },
+    "boss_key": {
+      "textures": "textures/items/boss_key"
+    },
+    "beacon_core": {
+      "textures": "textures/items/beacon_core"
+    },
+    "warden_eye": {
+      "textures": "textures/items/warden_eye"
+    },
+    "frost_rune": {
+      "textures": "textures/items/frost_rune"
+    },
+    "ember_rune": {
+      "textures": "textures/items/ember_rune"
+    },
+    "void_crystal": {
+      "textures": "textures/items/void_crystal"
+    },
+    "storm_orb": {
+      "textures": "textures/items/storm_orb"
+    },
+    "guardian_charm": {
+      "textures": "textures/items/guardian_charm"
+    },
+    "phoenix_feather": {
+      "textures": "textures/items/phoenix_feather"
+    },
+    "shadow_fragment": {
+      "textures": "textures/items/shadow_fragment"
+    },
+    "ancient_relic": {
+      "textures": "textures/items/ancient_relic"
+    },
+    "mythic_scroll": {
+      "textures": "textures/items/mythic_scroll"
+    },
+    "rune_case": {
+      "textures": "textures/items/rune_case"
+    },
+    "reinforced_ingot": {
+      "textures": "textures/items/reinforced_ingot"
+    },
+    "nether_star_fragment": {
+      "textures": "textures/items/nether_star_fragment"
+    },
+    "enchanted_dust": {
+      "textures": "textures/items/enchanted_dust"
+    },
+    "treasure_map": {
+      "textures": "textures/items/treasure_map"
+    },
+    "arena_pass": {
+      "textures": "textures/items/arena_pass"
+    },
+    "clan_banner": {
+      "textures": "textures/items/clan_banner"
+    },
+    "legendary_chest": {
+      "textures": "textures/items/legendary_chest"
+    },
+    "meteor_pickaxe": {
+      "textures": "textures/items/meteor_pickaxe"
+    },
+    "soul_compass": {
+      "textures": "textures/items/soul_compass"
+    },
+    "event_crown": {
+      "textures": "textures/items/event_crown"
+    },
+    "ancient_coin": {
+      "textures": "textures/items/ancient_coin"
+    },
+    "abyssal_pearl": {
+      "textures": "textures/items/abyssal_pearl"
+    },
+    "mystic_gem": {
+      "textures": "textures/items/mystic_gem"
+    },
+    "friz_token": {
+      "textures": "textures/items/friz_token"
+    }
+  }
+}

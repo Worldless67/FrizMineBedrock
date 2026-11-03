@@ -1,0 +1,9 @@
+# Safe random teleport defaults; durations are seconds and radii are blocks.
+enabled: true
+default-radius: 1000
+min-radius: 100
+max-radius: 3000
+attempts: 16
+cooldown-seconds: 300
+avoid-spawn-protection: true
+cooldowns: {}

@@ -1,0 +1,50 @@
+name: FrizProject
+main: net.frizproject.FrizProjectPlugin
+version: "1.4.0"
+api: ["1.0.0"]
+author: FrizProject
+description: "FrizMine server plugin: staff, creator item delivery, FK, kits and protected spawn builder."
+commands:
+  help: {description: "Show available FrizProject commands", usage: "/help"}
+  rules: {description: "Show server rules", usage: "/rules"}
+  coords: {description: "Show or toggle coordinates", usage: "/coords [on|off]"}
+  spawn: {description: "Teleport to the hub or configure its region", usage: "/spawn [set|build|info|protect|bypass|expand <radius>]"}
+  setspawn: {description: "Set the hub spawn at your position", usage: "/setspawn"}
+  balance: {description: "Show your FK balance", usage: "/balance"}
+  fk: {description: "Show FK balance or leaderboard", usage: "/fk [top]"}
+  pay: {description: "Transfer FK to an online player", usage: "/pay <player> <amount>"}
+  shop: {description: "Browse the configured shop catalogue", usage: "/shop [buy <item-id>]"}
+  donateshop: {description: "Browse and buy catalogue items with FK", usage: "/donateshop [buy <item-id>]"}
+  mine: {description: "Show the configured mine status", usage: "/mine info"}
+  rtp: {description: "Teleport to a safe random location", usage: "/rtp [radius]"}
+  tpa: {description: "Request to teleport to a player", usage: "/tpa <player>"}
+  tpaccept: {description: "Accept a teleport request", usage: "/tpaccept"}
+  tpdeny: {description: "Deny a teleport request", usage: "/tpdeny"}
+  msg: {description: "Send a private message", usage: "/msg <player> <message>"}
+  r: {description: "Reply to a private message", usage: "/r <message>"}
+  ignore: {description: "Toggle a player in your ignore list", usage: "/ignore <player>"}
+  ignorelist: {description: "Show your ignore list", usage: "/ignorelist"}
+  near: {description: "List nearby players", usage: "/near [radius]"}
+  ping: {description: "Show your ping", usage: "/ping"}
+  seen: {description: "Show a player's last seen time", usage: "/seen <player>"}
+  playtime: {description: "Show playtime", usage: "/playtime [player]"}
+  stats: {description: "Show player statistics", usage: "/stats [player]"}
+  top: {description: "Show the player kill leaderboard", usage: "/top"}
+  feed: {description: "Restore food level", usage: "/feed"}
+  heal: {description: "Restore health", usage: "/heal"}
+  ec: {description: "Open donor ender chest", usage: "/ec"}
+  fix: {description: "Repair held item", usage: "/fix"}
+  repair: {description: "Repair held item or inventory", usage: "/repair hand|all"}
+  report: {description: "Report a player or manage reports", usage: "/report <player> <reason> | info|accept|close <id>"}
+  reports: {description: "List open staff reports", usage: "/reports"}
+  helpop: {description: "Contact staff", usage: "/helpop <message> | list | answer <id> <text>"}
+  stafftp: {description: "Staff teleport to a player", usage: "/stafftp <player>"}
+  tphere: {description: "Teleport a player to staff", usage: "/tphere <player>"}
+  tpall: {description: "Teleport all players to staff", usage: "/tpall"}
+  beacon: {description: "Creator beacon tools", usage: "/beacon spawn"}
+  staffrank: {description: "Set a staff role", usage: "/staffrank <player> <role>"}
+  rankset: {description: "Set a donor rank", usage: "/rankset <player> <rank>"}
+  kit: {description: "Open the kit menu or receive a configured kit", usage: "/kit [name]"}
+  kits: {description: "Open the kit menu", usage: "/kits"}
+  staffchat: {description: "Send a staff chat message", usage: "/staffchat <message>"}
+  creator: {description: "Creator administration", usage: "/creator help"}

@@ -1,0 +1,275 @@
+########################################
+# Nukkit-MOT Advanced Configuration
+# Standard settings are in server.properties
+# Documentation: https://www.nukkit-mot.com/docs/user-guide/server-config/nukkit-mot-yml
+########################################
+
+# Performance and threading settings
+performance-settings:
+  # Number of async worker threads (auto = CPU cores + 1)
+  async-workers: auto
+  # Use virtual threads for opt-in async tasks (requires JVM 21+; cannot be enabled otherwise)
+  virtual-threads: true
+  # Automatically adjust tick rate based on server load
+  auto-tick-rate: true
+  # Maximum tick rate when auto-adjusting
+  auto-tick-rate-limit: 20
+  # Base tick rate (1 = normal speed)
+  base-tick-rate: 1
+  # Always tick players even when far from spawn
+  always-tick-players: false
+  # Enable thread watchdog
+  thread-watchdog: true
+  # Thread watchdog check interval (ms)
+  thread-watchdog-tick: 60000
+  # Kill a stalled shutdown after this many ms without save progress (0 = warn only)
+  shutdown-watchdog-kill-timeout: 600000
+  # Enable level garbage collection
+  do-level-gc: true
+  # Ticks between auto-saves (6000 = 5 minutes)
+  ticks-per-autosave: 6000
+  # Enable automatic level compaction
+  level-auto-compaction: true
+  # Ticks between compaction runs (36000 = 30 minutes)
+  level-auto-compaction-ticks: 36000
+  # LevelDB cache size in MB
+  leveldb-cache-mb: 64
+  # Use native LevelDB library
+  use-native-leveldb: false
+  # Enable Spark profiler
+  enable-spark: false
+
+# Network and compression settings
+network-settings:
+  # NetherNet (WebRTC) transport settings, runs alongside RakNet. Restricted-network clients 1.21.90+ join over HTTP signaling + WebRTC
+  nethernet:
+    # Enabled by default alongside RakNet, set false to disable. Clients 1.26.60+ removed RakNet and can only join over NetherNet. Signaling shares the server-port over TCP; WebRTC media also shares server-port by default via server.properties server-udp-ports (default 19132, relayed in-process from RakNet's socket; 19134 pins a standalone media port, 0 reverts to system-assigned)
+    enabled: true
+    # Extra ICE STUN/TURN servers, e.g. stun:stun.l.google.com:19302. TURN credentials go in the URL: turn:user:pass@host:port?transport=udp
+    ice-servers: []
+    # Operator identity PEM file, generated on first start, keep it. Changing it makes all returning players re-confirm the trust prompt
+    identity-file: keys/nethernet-identity.pem
+    # Operator name in the client trust prompt, empty uses the MOTD
+    identity-domain: ''
+  # ZLIB compression provider (2 recommended)
+  zlib-provider: 2
+  # Compression level (1-9, higher = more CPU, smaller packets)
+  compression-level: 5
+  # Chunk compression level (1-9, higher = more CPU, smaller chunks)
+  chunk-compression-level: 7
+  # Compression threshold in bytes
+  compression-threshold: 256
+  # Use Snappy compression instead of ZLIB
+  use-snappy-compression: false
+  # Max RakNet packets per 10ms per IP
+  rak-packet-limit: 2000
+  # RakNet cookie mode (active, offloaded, offloaded_psk, off, none, stateless)
+  rak-cookie-mode: active
+  # Login timeout in milliseconds, also bounds the NetherNet WebRTC handshake phase (30s fallback when 0)
+  timeout-milliseconds: 25000
+  # Show plugin list in query response
+  query-plugins: false
+  # Enable WaterDog proxy mode
+  use-waterdog: false
+  # ViaProxy Java Edition player username prefix
+  viaproxy-username-prefix: ''
+  # Enable Proxy Protocol v2 for UDP proxies (e.g. FRP). Whitelisted sources must send a valid PPv2 header; non-whitelisted sources are treated as direct clients
+  enable-proxy-protocol: false
+  # Whitelisted proxy source IPv4/IPv6 CIDR entries for Proxy Protocol. Use proxy addresses, not player addresses. IPv6 local addresses are trusted by default. Headerless or invalid packets from whitelisted sources are dropped
+  proxy-protocol-whitelist:
+  - 127.0.0.1/32
+  - ::1/128
+
+# Chunk loading and ticking settings
+chunk-settings:
+  # Chunks to send per tick
+  sending-per-tick: 4
+  # Chunks to tick per tick
+  ticking-per-tick: 40
+  # Chunk ticking radius around players
+  ticking-radius: 3
+  # Chunk generation queue size
+  generation-queue-size: 8
+  # Chunk population queue size
+  generation-population-queue-size: 8
+  # Enable dynamic light updates
+  light-updates: true
+  # Clear chunk tick list on save
+  clear-chunk-tick-list: true
+  # Spawn threshold for chunk loading
+  spawn-threshold: 56
+  # Cache chunks in memory
+  cache-chunks: false
+  # Use async chunk loading, sending and saving
+  async-chunks: true
+  # Max pending chunk writes per world before unloading pauses (backpressure)
+  max-pending-chunk-writes: 128
+  # Enable client chunk cache (blob hashes, protocol >= 475, requires client support)
+  client-cache: false
+  # Server-wide shared blob store budget in MB for the client chunk cache; also the hard cap for pinned (in-flight) blobs (raise for view distance 16+ or dispersed player groups)
+  blob-store-max-mb: 64
+  # Per-player pending blob hash cap; over it the chunk degrades to a full send
+  blob-pending-cap: 512
+  # Enable sub-chunk request pull mode (protocol >= 534)
+  sub-chunk-requests: true
+  # Sub-chunk serialization entries per player per tick
+  subchunk-entries-per-tick: 64
+
+# Entity spawning and AI settings
+entity-settings:
+  # Allow spawn eggs to work
+  spawn-eggs: true
+  # Enable mob AI (pathfinding, targeting, etc.)
+  mob-ai: true
+  # Enable automatic entity spawning task
+  auto-spawn-task: true
+  # Enable automatic entity despawn task
+  despawn-task: true
+  # Ticks between entity spawn attempts
+  ticks-per-spawns: 200
+  # Mobs farther than this many blocks (horizontally) from every player in their world run their
+  # update once per second instead of every tick, catching up the skipped time. Mobs already stop
+  # walking past this range. 0 turns the throttle off and keeps the walking range at 80 blocks
+  activation-blocks: 80
+  # Ticks between target searches for mobs without a follow target (vanilla-style reduced
+  # tick delay, phase-spread per mob). Mobs with a target, under attack or knock-back still
+  # search every tick. 1 restores the old per-tick search
+  target-search-interval: 10
+  # Ticks between entity despawn checks
+  ticks-per-despawns: 12000
+
+# World and dimension settings
+world-settings:
+  # Enable the Nether dimension
+  nether: true
+  # Enable the End dimension
+  end: true
+  # Enable vanilla portal mechanics
+  vanilla-portals: true
+  # Ticks to wait in portal before teleporting
+  portal-ticks: 80
+  # Worlds that should have their own nether dimensions, otherwise using the default nether world
+  multi-nether-worlds: []
+  # Worlds where the experimental built-in anti-xray is enabled
+  anti-xray-worlds: []
+  # Worlds where random block ticking is disabled
+  do-not-tick-worlds: []
+  # Worlds where entity auto spawning is not allowed
+  entity-spawning-disabled-worlds: []
+  # Load all worlds on startup
+  load-all-worlds: true
+  # Worlds where level auto-save is disabled
+  auto-save-disabled-worlds: []
+  # Per-world custom settings (only configure worlds that need a custom generator/seed)
+  worlds: {}
+
+# Player data and interaction settings
+player-settings:
+  # Save player data to disk
+  save-player-data: true
+  # Save player data by UUID instead of name
+  save-player-data-by-uuid: true
+  # Allow persona skins (custom player models)
+  persona-skins: true
+  # Cooldown for skin changes (seconds)
+  skin-change-cooldown: 15
+  # Don't limit skin geometry size
+  do-not-limit-skin-geometry: true
+  # Don't limit interaction distance
+  do-not-limit-interactions: false
+  # How to handle spaces in usernames (ignore, replace, deny)
+  space-name-mode: ignore
+  # Allow XP bottles in creative mode
+  xp-bottles-on-creative: true
+  # Allow stopping server from in-game
+  stop-in-game: false
+  # Allow opping players from in-game
+  op-in-game: true
+
+# Debug, logging and metrics settings
+debug-settings:
+  # Debug level (1=errors only, 2=warnings, 3=info)
+  debug-level: 1
+  # Enable ANSI colors in terminal title
+  ansi-title: false
+  # Show verbose deprecation warnings
+  deprecated-verbose: true
+  # Call DataPacketSendEvent
+  call-data-pk-send-event: true
+  # Call BatchPacketSendEvent
+  call-batch-pk-send-event: true
+  # Call EntityMotionEvent
+  call-entity-motion-event: true
+  # Enable block listener
+  block-listener: true
+  # Enable automatic bug reporting (Sentry)
+  automatic-bug-report: true
+  # Show update notifications
+  update-notifications: true
+  # Enable bStats metrics
+  bstats-metrics: true
+  # Hastebin API token for paste uploads
+  hastebin-token: ''
+
+# Game feature toggles
+game-feature-settings:
+  # Enable achievements
+  achievements: true
+  # Announce player achievements in chat
+  announce-player-achievements: true
+  # Allow beds to set spawn points
+  bed-spawnpoints: true
+  # Allow explosions to break blocks
+  explosion-break-blocks: true
+  # Maximum blocks moved by one piston (1-64; invalid values use 12)
+  piston-push-limit: 12
+  # Allow spawners to drop when broken
+  drop-spawners: true
+  # Enable anvil usage
+  anvils-enabled: true
+  # Enable vanilla boss bars
+  vanilla-bossbars: false
+  # Use client-side spectator mode
+  use-client-spectator: true
+  # Enable experimental mode features
+  enable-experiment-mode: true
+  # Minimum protocol version to allow (0 = no limit)
+  multiversion-min-protocol: 0
+  # Maximum protocol version to allow (-1 = no limit)
+  multiversion-max-protocol: -1
+  # Enable raw ore items
+  enable-raw-ores: true
+  # Enable new painting variants
+  enable-new-paintings: true
+  # Enable new chicken egg laying mechanics
+  enable-new-chicken-eggs-laying: true
+  # Force safety enchantment checks
+  forced-safety-enchant: true
+  # Enable vibrant visuals feature
+  enable-vibrant-visuals: true
+  # Enable raytracing support
+  enable-raytracing: true
+  # Temporarily ban players who fail Xbox authentication
+  temp-ip-ban-failed-xbox-auth: false
+  # Enable stricter IP bans
+  strong-ip-bans: false
+  # Check operator movement for cheating
+  check-op-movement: false
+  # Use vanilla armor damage reduction formula (with toughness/breach/deterministic EPF; disable for legacy linear formula)
+  vanilla-armor-reduction: true
+  # Apply vanilla armor knockback resistance (each netherite piece resists 10% of knockback; disable for legacy full-strength knockback)
+  vanilla-knockback-resistance: true
+
+# NetEase client support settings
+netease-settings:
+  # Enable NetEase client support
+  client-support: false
+  # Only allow NetEase clients
+  only-allow-netease-client: false
+
+# Custom block settings
+custom-block-settings:
+  # Automatically download vanilla block palettes (vanilla_palette_*.nbt) from the official mirror when missing. Required for custom block support across multiple client protocol versions. Files are cached in the bin/ folder and verified with SHA256. If disabled, you must manually prepare the files in the bin/ folder
+  auto-download-vanilla-palette: true
+  # Send hashed block network IDs (blockNetworkIdsHashed) to 1.19.80+ clients, including NetEase clients, instead of legacy runtime IDs. Enabled by default even without custom blocks; hashed IDs are persistent across versions. No effect on protocol < 1.19.80. Always forced on when custom blocks are registered
+  use-hashed-block-network-ids: true

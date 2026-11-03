@@ -1,0 +1,34 @@
+mine:
+  enabled: false
+  level: 1
+  timer-seconds: 1800
+  next-reset-at: 0
+  # Set both points in game with /creator mine pos1 and pos2.
+  pos1:
+    world: ""
+    x: 0
+    y: 0
+    z: 0
+  pos2:
+    world: ""
+    x: 0
+    y: 0
+    z: 0
+  # Weights are editable defaults; stone fills the remaining percent.
+  # The exact ore distribution was not specified in the supplied TЗ.
+  levels:
+    "1":
+      stone-id: 1
+      ores: {coal_ore: 12, iron_ore: 10, copper_ore: 10, gold_ore: 8, redstone_ore: 7, lapis_ore: 5, diamond_ore: 3, emerald_ore: 1}
+    "2":
+      stone-id: 1
+      ores: {coal_ore: 12, iron_ore: 10, copper_ore: 10, gold_ore: 8, redstone_ore: 7, lapis_ore: 5, diamond_ore: 3, emerald_ore: 1}
+    "3":
+      stone-id: 1
+      ores: {coal_ore: 12, iron_ore: 10, copper_ore: 10, gold_ore: 8, redstone_ore: 7, lapis_ore: 5, diamond_ore: 3, emerald_ore: 1}
+    "4":
+      stone-id: 1
+      ores: {coal_ore: 12, iron_ore: 10, copper_ore: 10, gold_ore: 8, redstone_ore: 7, lapis_ore: 5, diamond_ore: 3, emerald_ore: 1}
+    "5":
+      stone-id: 1
+      ores: {coal_ore: 12, iron_ore: 10, copper_ore: 10, gold_ore: 8, redstone_ore: 7, lapis_ore: 5, diamond_ore: 3, emerald_ore: 1}

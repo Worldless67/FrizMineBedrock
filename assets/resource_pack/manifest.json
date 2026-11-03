@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "FrizProject Catalog Icons",
+    "description": "FrizProject concept item atlas; icons are registered, server item-texture bridge is pending.",
+    "uuid": "3c4b7b6d-0e4f-4f8c-9b11-0a8c9c3b7f21",
+    "version": [
+      1,
+      0,
+      2
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      114
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "f7d4c0e2-1b0a-4a5a-9d18-2e3b4c5d6e7f",
+      "version": [
+        1,
+        0,
+        2
+      ]
+    }
+  ]
+}
